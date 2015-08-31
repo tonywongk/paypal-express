@@ -12,7 +12,7 @@ module Paypal
             :total => attributes[:amount],
             :tax => attributes[:tax_amount],
             :shipping => attributes[:shipping_amount],
-            :handing=> attributes[:handling_amount],
+            :handling=> attributes[:handling_amount],
             :ship_disc=>attributes[:ship_disc]
           )
         end
