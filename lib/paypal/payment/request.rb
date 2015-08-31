@@ -31,7 +31,7 @@ module Paypal
           :"PAYMENTREQUEST_#{index}_TAXAMT" => Util.formatted_amount(self.amount.tax),
           :"PAYMENTREQUEST_#{index}_SHIPPINGAMT" => Util.formatted_amount(self.amount.shipping),
           :"PAYMENTREQUEST_#{index}_HANDLINGAMT" => Util.formatted_amount(self.amount.handling),
-          :"PAYMENTREQUEST_#{index}_SHIPDISCAMT" => Util.formatted_amount(self.amount.ship_disc),
+          :"PAYMENTREQUEST_#{index}_SHIPDISCAMT" => "-#{Util.formatted_amount(self.amount.ship_disc)}",
           :"PAYMENTREQUEST_#{index}_CURRENCYCODE" => self.currency_code,
           :"PAYMENTREQUEST_#{index}_DESC" => self.description,
           :"PAYMENTREQUEST_#{index}_INVNUM" => self.invoice_number,
